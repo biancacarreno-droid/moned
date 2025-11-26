@@ -1,0 +1,429 @@
+:root {
+    --color-primary: #2E5E4E; 
+    --color-secondary: #FDF2F4;
+    --color-accent: #ca5f86; 
+    --color-text: #333333;
+    --font-titles: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: #fff;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.logo {
+    font-family: var(--font-titles);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px; 
+    width: 50px;  
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--color-accent);
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--font-titles);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--color-primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent);
+    margin: 10px auto 0;
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+#home {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(46, 94, 78, 0.6), rgba(46, 94, 78, 0.4)), url(/Tienda.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#home h1 {
+    font-family: var(--font-titles);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.catch-phrase {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--color-primary);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    border: 2px solid var(--color-accent);
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: white;
+    color: var(--color-accent);
+}
+
+#additional {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    text-align: center;
+}
+
+#additional .section-title {
+    color: var(--color-primary);
+}
+
+#additional .section-title::after {
+    background-color: var(--color-accent);
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: var(--font-titles);
+    color: var(--color-accent);
+}
+
+#about {
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    min-height: 80vh;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px var(--color-accent);
+    animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: justify;
+}
+
+.about-content h2 {
+    margin-bottom: 20px;
+}
+
+#shop {
+    background-color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 20px rgba(46, 94, 78, 0.2);
+    transform: translateY(-5px);
+    border-color: var(--color-secondary);
+}
+
+.project-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.project-info h3 {
+    font-family: var(--font-titles);
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+body.contact-page {
+    background-color: var(--color-secondary);
+}
+
+#contact {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid var(--color-secondary);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative; 
+    overflow: hidden;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Logo-Tienda.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; 
+    z-index: 0;
+}
+
+#contact h2, 
+#contact p, 
+#contact form, 
+#success-message {
+    position: relative;
+    z-index: 1;
+}
+
+#success-message {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color-primary);
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 2px solid rgba(141, 110, 99, 0.3); 
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: transparent !important; 
+    transition: border-color 0.3s;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+-webkit-text-fill-color: var(--color-text);
+-webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
+transition: background-color 5000s ease-in-out 0s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+button[type="submit"] {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    
+    #about {
+        flex-direction: column;
+    }
+}

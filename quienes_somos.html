@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos | Moned</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="Logo-Tienda.jpg" alt="Logo Moned">
+        </a>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes_somos.html" class="active">Quiénes Somos</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="about-image">
+                <img src="/Tienda-interior.png" alt="Interior de la tienda Moned en San Pedro">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">Nuestra Historia</h2>
+                <p>Somos <strong>Moned</strong>, una tienda comprometida con la moda circular y el medio ambiente. Creemos que la ropa no tiene fecha de vencimiento y que cada prenda merece una segunda oportunidad.</p>
+                <br>
+                <p>Ubicados en <strong>Avenida Las Rosas #1485 San Pedro de la Paz</strong>, seleccionamos cuidadosamente cada prenda para ofrecerte calidad, estilo y sostenibilidad. Nuestro equipo busca rescatar tesoros olvidados para que tú puedas brillar con un estilo único.</p>
+                <br>
+                <p>Nuestro compromiso es reducir la huella de carbono de la industria textil, fomentando el consumo responsable en nuestra comunidad.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>© 2025 Moned - Las Rosas #1485, Huertos Familiares, San Pedro de la Paz.</p></footer>
+
+    <script>function toggleMenu() { document.getElementById("nav-list").classList.toggle("active"); }</script>
+</body>
+</html>
